@@ -1,3 +1,5 @@
+const championList = [];
+
 function Champion (name, origin, gender, year, isCool) {
     this.name = name;
     this.origin = origin;
@@ -11,4 +13,9 @@ function Champion (name, origin, gender, year, isCool) {
             They were released in ${this.year}. Are they cool? ${this.isCool}`
         );
     };
+};
+
+function createChampion(name, origin, gender, year, isCool) {
+    let newChampion = new Champion(name, origin, gender, year, isCool);
+    championList.push(newChampion);
 };
